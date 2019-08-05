@@ -23,7 +23,7 @@ object SparkReadFile {
     inputData = spark.read.json("C:/Spark/examples/src/main/resources/people.json")
     inputData.printSchema()
     inputData.show()
-    df.select("name").show()
+    inputData.select("name").show()
     //Read a csv File
     inputData = spark.read.format("com.databricks.spark.csv")
                     .option("header", "false")
